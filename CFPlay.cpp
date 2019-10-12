@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "CFBoard.hpp"
+#include "Player.hpp"
 
 using std::cout;
 using std::endl;
