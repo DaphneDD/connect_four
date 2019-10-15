@@ -1,5 +1,5 @@
 #include "Player.hpp"
-
+#include <iostream>
 
 Player::Player(std::string playerName)
 {
@@ -20,4 +20,14 @@ void Player::setScore(int n)
 int Player::getScore() const
 {
 	return score;
+}
+
+void BronzePlayer::printPlayer() const
+{
+	std::cout << getName() << '\t' << getScore() << "\tBronze Player" << endl;
+}
+
+void SilverPlayer::printPlayer() const
+{
+	std::cout << getName() << '\t' << getScore() << "\tSilver Player" << endl;
 }
