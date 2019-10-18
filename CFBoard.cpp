@@ -159,4 +159,5 @@ void CFBoard::print()
 			std::cout<< ' '<< board[i][j];
 		std::cout << std::endl;
 	}
+	std::cout << std::endl;
 }
