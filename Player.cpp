@@ -1,10 +1,16 @@
 #include "Player.hpp"
 #include <iostream>
 
-Player::Player(std::string playerName)
+Player::Player(int id, std::string playerName)
 {
+	ID = id;
 	name = playerName;
 	score = 0;
+}
+
+int Player::getID() const
+{
+	return ID;
 }
 
 std::string Player::getName() const
@@ -22,12 +28,27 @@ int Player::getScore() const
 	return score;
 }
 
+
+BronzePlayer::BronzePlayer(std::string playerName)
+:Player(playerName) {}
+
 void BronzePlayer::printPlayer() const
 {
-	std::cout << getName() << '\t' << getScore() << "\tBronze Player" << endl;
+	std::cout << getName() << '\t' << getScore() << "\tBronze Player" << std::endl;
 }
+
+SilverPlayer::SilverPlayer(std::string playerName)
+:Player(playerName) {}
 
 void SilverPlayer::printPlayer() const
 {
-	std::cout << getName() << '\t' << getScore() << "\tSilver Player" << endl;
+	std::cout << getName() << '\t' << getScore() << "\tSilver Player" << std::endl;
+}
+
+GoldPlayer::GoldPlayer(std::string playerName)
+:Player(playerName) {}
+
+void GoldPlayer::printPlayer() const
+{
+	std::cout << getName() << '\t' << getScore() << "\tSilver Player" << std::endl;
 }

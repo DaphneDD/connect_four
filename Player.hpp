@@ -6,10 +6,12 @@
 class Player
 {
 protected:
+	int ID;
 	std::string name;
 	int score;
 public:
-	Player(std::string playerName);
+	Player(int id, std::string playerName);
+	int getID() const;
 	std::string getName() const;
 	void setScore(int n);
 	int getScore() const;
@@ -20,19 +22,22 @@ public:
 class BronzePlayer : public Player
 {
 public:
+	BronzePlayer(std::string);
 	virtual void printPlayer() const;
-}
+};
 
 class SilverPlayer : public Player
 {
 public:
+	SilverPlayer(std::string);
 	virtual void printPlayer() const;
-}
+};
 
 class GoldPlayer : public Player
 {
 public:
+	GoldPlayer(std::string);
 	virtual void printPlayer() const;
-}
+};
 
 #endif
