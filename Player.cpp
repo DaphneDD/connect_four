@@ -1,16 +1,10 @@
 #include "Player.hpp"
 #include <iostream>
 
-Player::Player(int id, std::string playerName)
+Player::Player(std::string playerName)
 {
-	ID = id;
 	name = playerName;
 	score = 0;
-}
-
-int Player::getID() const
-{
-	return ID;
 }
 
 std::string Player::getName() const

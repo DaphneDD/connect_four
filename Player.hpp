@@ -6,12 +6,10 @@
 class Player
 {
 protected:
-	int ID;
 	std::string name;
 	int score;
 public:
-	Player(int id, std::string playerName);
-	int getID() const;
+	Player(std::string playerName);
 	std::string getName() const;
 	void setScore(int n);
 	int getScore() const;
