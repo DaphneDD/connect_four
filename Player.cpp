@@ -23,24 +23,24 @@ int Player::getScore() const
 }
 
 
-BronzePlayer::BronzePlayer(std::string playerName)
-:Player(playerName) {}
+BronzePlayer::BronzePlayer(std::string playerName, int s)
+:Player(playerName, s) {}
 
 void BronzePlayer::printPlayer() const
 {
 	std::cout << getName() << '\t' << getScore() << "\tBronze Player" << std::endl;
 }
 
-SilverPlayer::SilverPlayer(std::string playerName)
-:Player(playerName) {}
+SilverPlayer::SilverPlayer(std::string playerName,int s)
+:Player(playerName, s) {}
 
 void SilverPlayer::printPlayer() const
 {
 	std::cout << getName() << '\t' << getScore() << "\tSilver Player" << std::endl;
 }
 
-GoldPlayer::GoldPlayer(std::string playerName)
-:Player(playerName) {}
+GoldPlayer::GoldPlayer(std::string playerName, int s)
+:Player(playerName, s) {}
 
 void GoldPlayer::printPlayer() const
 {

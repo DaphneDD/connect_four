@@ -9,7 +9,7 @@ CFGame::CFGame(Player* p1ptr, Player* p2ptr)
 :board()
 {
 	player1 = p1ptr;
-	player2 = p1ptr;
+	player2 = p2ptr;
 }
 
 int CFGame::_getColNumber()

@@ -20,21 +20,21 @@ public:
 class BronzePlayer : public Player
 {
 public:
-	BronzePlayer(std::string);
+	BronzePlayer(std::string, int s = 0);
 	virtual void printPlayer() const;
 };
 
 class SilverPlayer : public Player
 {
 public:
-	SilverPlayer(std::string);
+	SilverPlayer(std::string, int s = 0);
 	virtual void printPlayer() const;
 };
 
 class GoldPlayer : public Player
 {
 public:
-	GoldPlayer(std::string);
+	GoldPlayer(std::string, int s = 0);
 	virtual void printPlayer() const;
 };
 
