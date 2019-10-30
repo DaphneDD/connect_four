@@ -3,6 +3,7 @@
 
 using std::cout;
 using std::endl;
+using std::cin;
 
 CFGame::CFGame(Player* p1ptr, Player* p2ptr)
 :board()
@@ -53,10 +54,22 @@ void CFGame::play()
 	State result = board.getGameState();
 	switch (result)
 	{
-		case X_WON: cout << player1->getName() << " WON!" << endl; break;
-		case O_WON: cout << player2->getName() << " WON!" << endl; break;
-		case DRAW: cout << "DRAW!" << endl; break;
-		case UNFINISHED: cout << "UNFINISHED" << endl; break;
+		case X_WON: 
+			cout << player1->getName() << " WON!" << endl; 
+			player1->setScore(player1->getScore() + 2);
+			break;
+		case O_WON: 
+			cout << player2->getName() << " WON!" << endl;
+			player2->setScore(player2->getScore() + 2);
+			break;
+		case DRAW: 
+			cout << "DRAW!" << endl; 
+			player1->setScore(player1->getScore() + 1);
+			player2->setScore(player2->getScore() + 1);
+			break;
+		case UNFINISHED: 
+			cout << "UNFINISHED" << endl; 
+			break;
 		default: cout << "How could this happen?" << endl;
 	}
 	

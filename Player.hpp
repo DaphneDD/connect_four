@@ -9,7 +9,7 @@ protected:
 	std::string name;
 	int score;
 public:
-	Player(std::string playerName);
+	Player(std::string playerName, int s = 0);
 	std::string getName() const;
 	void setScore(int n);
 	int getScore() const;
